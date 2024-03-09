@@ -26,21 +26,16 @@ void primesieve() {
 
 int main() {
     
-    int n = 0;
+    int n = 0, i = 1;
     
     primesieve();
-    
-    for (int i = 2; i < 114500; i++) {
+
+    while (n < 10001) {
+        i++;
         n += primes[i];
-
-        if (n == 10001) {
-            n = i;
-            break;
-        }
     }
-    
 
-    printf("%d \n", n);
+    printf("%d \n", i);
 
     return 0;
 }
