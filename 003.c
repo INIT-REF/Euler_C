@@ -1,8 +1,8 @@
 // Solution to Project Euler Problem 003
+//
 // I skipped the trial divison by 2 because it is an odd number.
-// If you wanted to make the solution more universal, you would
-// need to add a separate loop before the one that divides by
-// odd numbes
+// If you wanted to make the solution more universal, you would need to add 
+// a separate loop before the one that divides by odd numbes
 
 #include <stdio.h>
 
