@@ -4,22 +4,24 @@
 
 
 #include <stdio.h>
+#include <stdlib.h>
 
-int primes[2000000] = {0};
+int* primesieve(int limit) {
 
-
-void primesieve() {
+    int* primes = (int*)malloc(limit * sizeof(int));
     
-    for (int i = 2; i < 2000000; i++)
+    for (int i = 2; i < limit; i++)
         primes[i] = 1;
 
-    for (int i = 2; i * i < 2000000; i++) {
+    for (int i = 2; i * i < limit; i++) {
         if (primes[i]) {
-            for (int j = i * i; j < 2000000; j += i) {
+            for (int j = i * i; j < limit; j += i) {
                 primes[j] = 0;
             }
         }   
     }
+
+    return primes;
 }
 
 
@@ -27,7 +29,7 @@ int main() {
     
     long long int sum = 2;
     
-    primesieve();
+    int* primes = primesieve(2000000);
 
     for (int i = 3; i < 2000000; i += 2) {
         sum += i * primes[i];
