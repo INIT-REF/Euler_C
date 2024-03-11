@@ -1,4 +1,4 @@
-// Solution to Project Euler Problem 021
+// Solution to Project Euler Problem 023
 
 #include <stdio.h>
 
