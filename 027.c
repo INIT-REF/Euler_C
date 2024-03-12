@@ -50,5 +50,7 @@ int main() {
 
     printf("%d\n", p);
 
+    free(primes);
+
     return 0;
 }
