@@ -2,7 +2,7 @@
 
 int main() {
     int b = 4000, d = 3, n = 12000, k, count = -1, tmp;
-
+ 
     while (d > 2) {
         count++;
         k = (n + b) / d;
