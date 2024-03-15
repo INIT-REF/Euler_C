@@ -27,18 +27,18 @@ int* primesieve(int limit) {
 
 int main() {
     
-    long long int limit = 50000000, n = 0, count = 0;
+    int limit = 50000000, n = 0, count = 0;
     int ns[50000000] = {0};
 
     int* primes = primesieve(7100);
 
-    for (long long int i = 2; i < 7100; i++) {
-        if (!primes[i] || i * i > limit)
+    for (int i = 2; (n = i * i) < limit; i++) {
+        if (!primes[i])
             continue;
-        for (long long int j = 2; i * i + j * j * j < limit; j++) {
+        for (int j = 2; (n += j * j * j) < limit; j++) {
             if (!primes[j])
                 continue;
-            for (long long int k = 2; (n = i * i + j * j * j + k * k * k * k) < limit; k++) {
+            for (int k = 2; (n += k * k * k * k) < limit; k++) {
                 if (!primes[k])
                     continue;
                     
@@ -50,7 +50,7 @@ int main() {
     for (int i = 0; i < 50000000; i++)
         count += ns[i];
 
-    printf("%lld\n", count);
+    printf("%d\n", count);
 
     return 0;
 }
