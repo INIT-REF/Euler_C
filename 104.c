@@ -15,17 +15,17 @@ int isPandigital(int* f) {
 }
 
 int main() {
-    int fib1[100000] = {0};
-    int fib2[100000] = {0};
-    int carry, tmp, index = 2, firstsig = 99998;
+    int fib1[1000] = {0};
+    int fib2[1000] = {0};
+    int carry, tmp, index = 2, firstsig = 998;
 
-    fib1[99999] = fib2[99999] = 1;
+    fib1[999] = fib2[999] = 1;
 
 
     while (1) {
         carry = 0;
 
-        for (int i = 99999; i >= firstsig; i--) {
+        for (int i = 999; i >= firstsig; i--) {
             fib2[i] += fib1[i] + carry;
             carry = fib2[i] / 10;
             fib2[i] %= 10;
@@ -40,9 +40,9 @@ int main() {
 
         index++;
 
-        if (firstsig > 99900)
+        if (firstsig > 990)
             continue;
-        else if(isPandigital(&fib1[firstsig+1]) && isPandigital(&fib1[99991]))
+        else if(isPandigital(&fib1[firstsig+1]) && isPandigital(&fib1[991]))
                 break;
     }
 

@@ -1,19 +1,35 @@
+// Solution to Project Euler Problem 016
+// 
+// Using an array representation to avoid a BigInt library.
+
 #include <stdio.h>
 
 int main() {
-    long long int n = 1;
+    int n[20] = {0};
+    int sum = 0, carry;
     
-    for (long long int i = 0; i < 7830457; i++) {
-        n *= 2;
-        n %= 10000000000;
+    n[19] = 1;
+    
+    for (int i = 0; i < 7830457; i++) {
+        carry = 0;
+        for (int j = 19; j >= 0; j--) {
+            n[j] = 2 * n[j] + carry;
+            carry = n[j] / 10;
+            n[j] %= 10;
+        }
     }
 
-    n = n * 7 % 10000000000;
-    n = n * 151 % 10000000000;
-    n = n * 269 % 10000000000;
-    n++;
+    for (int i = 19; i >= 0; i--) {
+            n[i] = 28433 * n[i] + carry;
+            carry = n[i] / 10;
+            n[i] %= 10;
+    }
 
-    printf("%d\n", n);
+    for (int i = 10; i < 20; i++) {
+        printf("%d", n[i]);
+    }
+
+    printf("\n");
 
     return 0;
 }
