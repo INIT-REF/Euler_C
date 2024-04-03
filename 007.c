@@ -24,7 +24,7 @@ void primesieve() {
     }
 }
 
-int main() {
+int main(void) {
     
     int n = 0, i = 1;
     

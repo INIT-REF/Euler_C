@@ -7,7 +7,7 @@
 
 #include <stdio.h>
 
-int main() {
+int main(void) {
     long long int p = 1;
 
     for (int i = 1; i <= 20; i++)

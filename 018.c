@@ -6,7 +6,7 @@ int max(int a, int b) {
     return a > b ? a : b;
 }
 
-int main() {
+int main(void) {
 
     int tri[15][15] = {{75},
                        {95,64},

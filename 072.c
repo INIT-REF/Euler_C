@@ -20,7 +20,7 @@ int phi(int n) {
     return ph;
 }
 
-int main() {
+int main(void) {
     long long int sum = 0;
 
     for (int n = 2; n <= 1000000; n++) {

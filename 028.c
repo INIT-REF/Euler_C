@@ -2,7 +2,7 @@
 
 #include <stdio.h>
 
-int main() {
+int main(void) {
     int sum = 1, n = 1, size = 1001;
 
     for (int i = 4; i < 2 * size + 2; i++) {

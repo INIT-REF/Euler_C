@@ -2,7 +2,7 @@
 
 #include <stdio.h>
 
-int main() {
+int main(void) {
     int sum = 0, fib1 = 1, fib2 = 2;
 
     while (fib2 < 4e6) {

@@ -11,7 +11,7 @@ int lcm (int a, int b) {
     return b * a / gcd(a, b);
 }
 
-int main() {
+int main(void) {
     int res = 1;
 
     for (int i = 1; i <= 20; i++) {

@@ -1,6 +1,6 @@
 #include <stdio.h>
 
-int main() {
+int main(void) {
     int count = 0, tmp, sum;
 
     for (int n = 2; n <= 10000000; n++) {

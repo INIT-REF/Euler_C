@@ -25,7 +25,7 @@ int* primesieve(int limit) {
 }
 
 
-int main() {
+int main(void) {
     
     int limit = 50000000, n = 0, count = 0;
     int ns[50000000] = {0};

@@ -15,7 +15,7 @@ int isPalindrome(int n) {
 }
 
 
-int main() {
+int main(void) {
     int max = 0;
     
     for (int i = 100; i < 1000; i++) {

@@ -1,6 +1,6 @@
 #include <stdio.h>
 
-int main() {
+int main(void) {
     int sum, x, y, min, diff, mindiff, target = 2000000;
     long long int area;
 

@@ -15,7 +15,7 @@ int fact(int n) {
     return f;
 }
 
-int main() {
+int main(void) {
     int d, j, t, p = 999999;
     int taken[10] = {0};
 

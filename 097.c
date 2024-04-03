@@ -3,7 +3,7 @@
 #include <stdio.h>
 #include <time.h>
 
-int main() {
+int main(void) {
     long long int n = 2;
     clock_t tic, toc;
 

@@ -25,7 +25,7 @@ int* primesieve(int limit) {
 }
 
 
-int main() { 
+int main(void) { 
     int* primes = primesieve(2000);
     int n, maxn = 0, p;
 

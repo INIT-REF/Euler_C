@@ -4,7 +4,7 @@
 
 #include <stdio.h>
 
-int main() {
+int main(void) {
     int sum = 0, s = 0;
     int steps[7] = {3, 2, 1, 3, 1, 2, 3};
 

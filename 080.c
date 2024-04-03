@@ -51,7 +51,7 @@ int init(int *a, int* b, int n){
     a[109] = (n % 10);
 }
 
-int main() {
+int main(void) {
     int a[110] = {0};
     int b[110] = {0};
     int sum = 0;

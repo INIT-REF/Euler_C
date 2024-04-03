@@ -21,7 +21,7 @@ int period(int n) {
     return l;
 }
 
-int main() {
+int main(void) {
     int sum = 0;
 
     for (int i = 2; i <= 10000; i++)

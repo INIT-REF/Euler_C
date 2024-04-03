@@ -20,7 +20,7 @@ int phi(int n) {
     return ph;
 }
 
-int main() {
+int main(void) {
     double t, maxt = 0;
     int maxn;
 

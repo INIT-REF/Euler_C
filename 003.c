@@ -6,7 +6,7 @@
 
 #include <stdio.h>
 
-int main() {
+int main(void) {
     long long int n = 600851475143, d;
 
     for (d = 3; d * d < n; d += 2) {

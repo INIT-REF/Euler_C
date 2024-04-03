@@ -14,7 +14,7 @@ int isPandigital(int* f) {
     return 1;
 }
 
-int main() {
+int main(void) {
     int fib1[1000] = {0};
     int fib2[1000] = {0};
     int carry, tmp, index = 2, firstsig = 998;

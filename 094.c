@@ -13,7 +13,7 @@ int area(int a, int b, int c) {
     return 0;
 }
 
-int main() {
+int main(void) {
     
     long long int sum = 0, limit = 1000000000;
     int a = 2, k;

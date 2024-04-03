@@ -4,7 +4,7 @@ int max(int a, int b) {
     return a > b ? a : b;
 }
 
-int main() {
+int main(void) {
     int tri[100][100] = {0};
     FILE* f = fopen("triangle.txt", "r");
     

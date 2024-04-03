@@ -19,7 +19,7 @@ int divSum(int n) {
     return ++dsum;
 }
 
-int main() {
+int main(void) {
 
     int sum = 0;
     int list[28124] = {0};

@@ -18,7 +18,7 @@ int lcm(int a, int b) {
 }
 
 
-int main() {
+int main(void) {
 
     int result = 1;
     

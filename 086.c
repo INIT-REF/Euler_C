@@ -10,7 +10,7 @@ double min(double l1, double l2, double l3) {
         return l3;
 }
 
-int main() {
+int main(void) {
     int i, j, k, m = 1341, count = 0;
     double minl, l1, l2, l3;
     while (1) {

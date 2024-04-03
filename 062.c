@@ -1,6 +1,6 @@
 #include <stdio.h>
 
-int main() {
+int main(void) {
     long long int n_2 = 11, n_1 = 19, n, offset = 4, limit = 100;
 
     for (int i = 7; i < limit + 2; i++) {

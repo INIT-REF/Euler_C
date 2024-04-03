@@ -4,7 +4,7 @@
 
 #include <stdio.h>
 
-int main() {
+int main(void) {
     int n[158] = {0};
     int sum = 0, carry = 0;
 

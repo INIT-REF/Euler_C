@@ -25,7 +25,7 @@ int* primesieve(int limit) {
 }
 
 
-int main() {
+int main(void) {
     
     long long int sum = 2;
     

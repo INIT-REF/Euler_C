@@ -2,7 +2,7 @@
 
 #include <stdio.h>
 
-int main() {
+int main(void) {
     int cache[1000000] = {0};
     int l, max = 0, maxl = 0;
     long long int tmp;

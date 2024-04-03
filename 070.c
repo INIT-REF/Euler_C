@@ -42,7 +42,7 @@ int isPermutation(int a, int b) {
     return 1;
 }
 
-int main() {
+int main(void) {
     double r, minr = 2;
     int minn;
     

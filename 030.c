@@ -4,7 +4,7 @@
 
 #include <stdio.h>
 
-int main() {
+int main(void) {
     int sum, tmp, p, total = 0;
 
     for (int i = 2; i < 354294; i++) {

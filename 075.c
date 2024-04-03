@@ -7,7 +7,7 @@ int gcd(int a, int b) {
     return gcd(b, a % b);
 }
 
-int main() {
+int main(void) {
     int k, sum;
     int sums[1500001] = {0};
 

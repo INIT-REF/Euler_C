@@ -2,7 +2,7 @@
 
 #include <stdio.h>
 
-int main() {
+int main(void) {
     int a, l, maxd, max = 0;
 
     for (int d = 3; d < 1000; d += 2) {

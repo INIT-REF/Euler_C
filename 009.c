@@ -4,7 +4,7 @@
 
 #include <stdio.h>
 
-int main() {
+int main(void) {
 
     int finished = 0, r = 2, d, p;
 

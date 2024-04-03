@@ -31,7 +31,7 @@ int nDivs(int n) {
 }
 
 
-int main() {
+int main(void) {
 
     int tri = 1, i = 2;
     

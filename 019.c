@@ -2,7 +2,7 @@
 
 #include <stdio.h>
 
-int main() {
+int main(void) {
     int cal[100][12][31] = {0};
     int dim[12] = {31,28,31,30,31,30,31,31,30,31,30,31};
 

@@ -8,7 +8,7 @@ int cmpstr(const void* a, const void* b) {
     return strcmp((const char*) a, (const char*)b);
 }
 
-int main() {
+int main(void) {
     int total = 0, sum, j;
     char names[][20]={"MARY","PATRICIA","LINDA", ... };
     

@@ -17,7 +17,7 @@ int divSum(int n) {
     return ++dsum;
 }
 
-int main() {
+int main(void) {
     int nums[1000000] = {0};
     int tmp, l, maxl = 0, smallest;
 

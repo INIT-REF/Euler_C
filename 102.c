@@ -10,7 +10,7 @@ int withOrigin(double x1, double y1, double x2, double y2, double x3, double y3)
     return (0 <= a && a <= 1 && 0 <= b && b <= 1 && 0 <= c && c <= 1);
 }
 
-int main() {
+int main(void) {
     int count = 0;
     double tris[1000][6] = {0};
     FILE* f = fopen("triangles.txt", "r");
