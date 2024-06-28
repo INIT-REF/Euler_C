@@ -1,15 +1,12 @@
-// Solution to Project Euler Problem 002
-
 #include <stdio.h>
 
 int main(void) {
-    int sum = 0, fib1 = 1, fib2 = 2;
+    int fib1 = 1, fib2 = 2; sum = 0;
 
-    while (fib2 < 4e6) {
-        sum += fib2 * (1 - fib2 % 2);
-        fib2 = fib1 + fib2;
+    for (; fib2 < 4e6; fib2 += fib1) {
+        sum += fib2 * !(fib2 & 1);
         fib1 = fib2 - fib1;
-    }
+    }        
 
     printf("%d\n", sum);
 

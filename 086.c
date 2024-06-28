@@ -1,43 +1,19 @@
 #include <stdio.h>
 #include <math.h>
 
-double min(double l1, double l2, double l3) {
-    if (l1 < l2 && l1 < l3)
-        return l1;
-    if (l2 < l1 && l2 < l3)
-        return l2;
-    else
-        return l3;
+int main(void) {
+    int l = 2, count = 0, target = 1000000;
+
+while (count < target) {
+    l++;
+    for (int wh = 3; wh <= 2 * l; wh++) {
+        double rt = sqrt(wh * wh + l * l);                    
+        if (rt == (int)(rt)) {
+            count += (wh <= l) ? wh / 2 : 1 + (l - (wh+1)/2);
+        }
+    }
 }
 
-int main(void) {
-    int i, j, k, m = 1341, count = 0;
-    double minl, l1, l2, l3;
-    while (1) {
-        count = 0;
-        for (i = 1; i <= m; i++) {
-            for (j = i; j <= m; j++) {
-                for (k = j; k <= m; k++) {
-                    l1 = sqrt(i * i + (j + k) * (j + k));
-                    l2 = sqrt(j * j + (i + k) * (i + k));
-                    l3 = sqrt(k * k + (i + j) * (i + j));
-
-                    minl = min(l1, l2, l3);
-
-                    if (minl == floor(minl)){
-                        count++; 
-                        if (count > 1000000){
-                            printf("%d %d %d\n", i, j, k);
-                            return 0;
-                        }
-                    }
-                }
-            }
-        }
-        m+=100;
-    }
-
-    printf("%d %d %d\n", j, k, i);
-
+    printf("%d\n", l);
     return 0;
 }

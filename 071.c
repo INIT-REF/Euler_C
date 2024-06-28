@@ -1,23 +1,23 @@
 #include <stdio.h>
 
-int gcd(int a, int b) {
-    if (a == 0)
-        return b;
-
-    return gcd(b % a, a);
-}
-
-int lcm (int a, int b) {
-    return b * a / gcd(a, b);
-}
-
 int main(void) {
-    int res = 1;
+    long long int a = 1, b = 1000000, c = 1, d = 999999, p, q, k;
 
-    for (int i = 1; i <= 20; i++) {
-        res = lcm(res, i);
+    while (1) {
+        k = (1000000 + b) / d;
+        p = (k * c) - a;
+        q = (k * d) - b;
+
+        if (p == 3 && q == 7)
+            break;
+        
+        a = c;
+        b = d;
+        c = p;
+        d = q;
     }
 
-    printf("%d\n", lcm(15,20));
+    printf("%d/%d\n", c, d);
+    
     return 0;
 }
