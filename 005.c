@@ -6,13 +6,11 @@ int gcd(int a, int b) {
 
 
 int lcm(int a, int b) {
-    
     return b * (a / gcd(a, b));
 }
 
 
 int main(void) {
-
     int result = 1;
     
     for (int i = 2; i <= 20; i++) {
