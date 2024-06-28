@@ -1,5 +1,3 @@
-// Solution to Project Euler Problem 021
-
 #include <stdio.h>
 
 int divSum(int n) {
@@ -20,7 +18,6 @@ int divSum(int n) {
 }
 
 int main(void) {
-
     int sum = 0;
     
     for (int i = 1; i < 10000; i++) {
@@ -30,5 +27,6 @@ int main(void) {
     }
 
     printf("%d\n", sum);
+
     return 0;
 }
