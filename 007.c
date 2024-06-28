@@ -16,16 +16,16 @@ void primesieve(char* arr, int l) {
 
 int main(void) {
     char primes[114500] = {0};
-    int count = 1, i = 3;
+    int count = 1, i = 1;
     
     primesieve(primes, 114500);
 
     while (count < 10001) {
-        count += primes[i];
         i += 2;
+        count += primes[i];
     }
 
-    printf("%d \n", i - 2);
+    printf("%d \n", i);
 
     return 0;
 }
