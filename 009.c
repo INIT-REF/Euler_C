@@ -11,6 +11,7 @@ int main(void) {
             if (d % i == 0 && 1000 == (3 * r) + (2 * i) + (2 * d / i)) {
                 finished = 1;
                 abc = (r + i) * (r + (d / i)) * (r + i + (d / i));
+                break;
             }
         }
 
