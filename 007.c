@@ -1,24 +1,26 @@
 #include <stdio.h>
+#include <stdlib.h>
 
-void primesieve(char* arr, int l) {
-    
-    for (int i = 2; i < l; i++)
-        arr[i] = 1;
+char* primesieve(int limit) {
+    char* primes = (char*)malloc(limit * sizeof(char));
+            
+    for (int i = 2; i < limit; i++)
+        primes[i] = 1;
 
-    for (int i = 2; i * i < l; i++) {
-        if (arr[i]) {
-            for (int j = i * i; j < l; j += i) {
-                arr[j] = 0;
+    for (int i = 2; i * i < limit; i++) {
+        if (primes[i]) {
+            for (int j = i * i; j < limit; j += i) {
+                primes[j] = 0;
             }
         }   
     }
+
+    return primes;
 }
 
 int main(void) {
-    char primes[114500] = {0};
+    char* primes = primesieve(114500);;
     int count = 1, i = 1;
-    
-    primesieve(primes, 114500);
 
     while (count < 10001) {
         i += 2;
