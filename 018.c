@@ -14,16 +14,15 @@ int main(void) {
                  67, 30, 73, 16, 69, 87, 40, 31, 4, 62, 98, 27, 23, 9, 70, 98, 
                  73, 93, 38, 53, 60, 4, 23};
 
-    int i = 105, col = 0, row = 14;
+    int i = 105;
 
-    while (row) {
-        for (col = 0; col < row; col++) {
+    for (int row = 14; row; row--) {
+        for (int col = 0; col < row; col++) {
             tri[i - row] += max(tri[i], tri[i + 1]);
             i++;
         }
 
         i -= 2 * row;
-        row--;
     }
 
     printf("%d\n", *tri);
