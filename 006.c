@@ -1,19 +1,14 @@
-// Solution to Project Euler Problem 006
-
-
 #include <stdio.h>
 
 int main(void) {
-    int sumofsquares = 0, squareofsum = 0;
+    int squaresum = 0, sum = 0;
 
     for (int i = 1; i <= 100; i++) {
-        sumofsquares += i * i;
-        squareofsum += i;
+        squaresum += i * i;
+        sum += i;
     }
 
-    squareofsum *= squareofsum;
-
-    printf("%d\n", squareofsum - sumofsquares);
+    printf("%d\n", sum * sum - squaresum);
 
     return 0;
 }
