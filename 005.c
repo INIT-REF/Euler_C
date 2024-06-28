@@ -4,16 +4,19 @@
 #include <stdio.h>
 
 int gcd(int a, int b) {
+    int tmp;
 
-    if (a == 0)
-        return b;
+    while (a) {
+        tmp = a;
+        a = b % tmp;
+        b = tmp;
+    }
 
-    return gcd(b % a, a);
+    return b;
 }
 
 
 int lcm(int a, int b) {
-    
     return b * (a / gcd(a, b));
 }
 
