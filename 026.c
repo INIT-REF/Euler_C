@@ -1,9 +1,7 @@
-// Solution to Project Euler Problem 026
-
 #include <stdio.h>
 
 int main(void) {
-    int a, l, maxd, max = 0;
+    int a, l, maxl = 0, maxd;
 
     for (int d = 3; d < 1000; d += 2) {
         if (d % 5 == 0) {
@@ -18,8 +16,8 @@ int main(void) {
             a = (a * 10) % d;
         }
 
-        if (l > max) {
-            max = l;
+        if (l > maxl) {
+            maxl = l;
             maxd = d;
         }
     } 
