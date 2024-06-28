@@ -1,5 +1,3 @@
-// Solution to Project Euler Problem 012  
-
 #include <stdio.h>
 
 int nDivs(int n) {
@@ -33,11 +31,10 @@ int nDivs(int n) {
 
 int main(void) {
 
-    int tri = 1, i = 2;
+    int tri = 1;
     
-    while(nDivs(tri) < 500) {
+    for(int i = 2; nDivs(tri) < 500; i++) {
         tri += i;
-        i++;
     }
 
     printf("%d\n", tri);
