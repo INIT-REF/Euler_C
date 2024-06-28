@@ -1,5 +1,3 @@
-// Solution to Project Euler Problem 023
-
 #include <stdio.h>
 
 int divSum(int n) {
@@ -20,7 +18,6 @@ int divSum(int n) {
 }
 
 int main(void) {
-
     int sum = 0;
     int list[28124] = {0};
     int isAbNum[28124] = {0};
