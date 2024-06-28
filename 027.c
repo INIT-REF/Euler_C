@@ -1,13 +1,7 @@
-// Solution to Project Euler Problem 027
-//
-// Using the fact that b needs to be a prime, or else the formula
-// won't result in a prime for n=0.
-
 #include <stdio.h>
 #include <stdlib.h>
 
 int* primesieve(int limit) {
-
     int* primes = (int*)malloc(limit * sizeof(int));
     
     for (int i = 2; i < limit; i++)
