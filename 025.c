@@ -1,34 +1,30 @@
-// Solution to Project Euler Problem 025
-
 #include <stdio.h>
 
 int main(void) {
-    int fib1[1000] = {0};
-    int fib2[1000] = {0};
-    int carry, tmp, index = 2, firstsig = 998;
+    long long int fib1[100] = {0};
+    long long int fib2[100] = {0};
+    long long int carry, tmp, d = 1e10;
+    int index = 2;
 
-    fib1[999] = fib2[999] = 1;
+    fib1[99] = fib2[99] = 1;
 
 
-    while (!fib1[0]) {
+    while (fib1[0] < 1e9) {
         carry = 0;
 
-        for (int i = 999; i >= firstsig; i--) {
+        for (int i = 99; i >= 0; i--) {
             fib2[i] += fib1[i] + carry;
-            carry = fib2[i] / 10;
-            fib2[i] %= 10;
+            carry = fib2[i] / d;
+            fib2[i] %= d;
             tmp = fib2[i];
             fib2[i] = fib1[i];
             fib1[i] = tmp;
-        }
-        
-        if (fib1[firstsig]) {
-            firstsig--;
         }
 
         index++;
     }
 
     printf("%d\n", index);
+
     return 0;
 }
