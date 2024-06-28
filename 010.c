@@ -1,14 +1,8 @@
-// Solution to Project Euler Problem 010
-//
-// Using the same sieve algorithm as problem 007,
-
-
 #include <stdio.h>
 #include <stdlib.h>
 
-int* primesieve(int limit) {
-
-    int* primes = (int*)malloc(limit * sizeof(int));
+char* primesieve(int limit) {
+    char* primes = (char*)malloc(limit * sizeof(char));
     
     for (int i = 2; i < limit; i++)
         primes[i] = 1;
@@ -26,10 +20,8 @@ int* primesieve(int limit) {
 
 
 int main(void) {
-    
     long long int sum = 2;
-    
-    int* primes = primesieve(2000000);
+    char* primes = primesieve(2000000);
 
     for (int i = 3; i < 2000000; i += 2) {
         sum += i * primes[i];
@@ -37,5 +29,6 @@ int main(void) {
 
     printf("%lld\n", sum);
 
+    free(primes);
     return 0;
 }
