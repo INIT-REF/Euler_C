@@ -1,5 +1,3 @@
-// Solution to Project Euler Problem 014
-
 #include <stdio.h>
 
 int main(void) {
@@ -12,14 +10,14 @@ int main(void) {
         l = 0;
 
         while (tmp != 1) {
-            if (tmp % 2 == 0)
+            if (!(tmp & 1))
                 tmp /= 2;
             else
                 tmp = 3 * tmp + 1;
             
             l++;
 
-            if (tmp < 1000000 && cache[tmp] > 0) {
+            if (tmp < 1000000 && cache[tmp]) {
                 l += cache[tmp];
                 break;
             }

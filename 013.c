@@ -1,7 +1,3 @@
-// Solution to Project Euler problem 013
-//
-// As we are only interested in the first 10 digits, it is sufficient to truncate the numbers accordingly.
-
 #include <stdio.h>
 
 int main(void) {
@@ -31,7 +27,6 @@ int main(void) {
                         415031288803 + 812348806732 + 826165707739 + 229188020587 +
                         771585425020 + 721078384350 + 208496039801 + 535035342264;
     char str[20];
-
     sprintf(str, "%lld", sum);
     printf("%.10s\n", str);
 
